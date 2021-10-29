@@ -35,12 +35,15 @@ function validar() {
 
 function validarComunidad(){
     if(document.getElementById('sComunidad').value == 11){
-        select = document.createElement('select')
-        input1 = document.createElement('input')
-        input2 = document.createElement('input')
-        input1.appendChild(document.createTextNode('BADAHO'))
-        input2.appendChild(document.createTextNode('Campo'))
-        document.insertBefore(select, document.getElementById('sComunidad'))
-        
+        let select = document.createElement('select')
+        select.classList.add('listaextremadura')
+        let option1 = document.createElement('option')
+        let option2 = document.createElement('option')
+        option1.appendChild(document.createTextNode('BADAHO'))
+        option2.appendChild(document.createTextNode('Campo'))
+
+        select.appendChild(option1)
+        select.appendChild(option2)
+        document.getElementById('comuni').appendChild(select)
     }
 }
